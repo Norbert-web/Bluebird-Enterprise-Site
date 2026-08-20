@@ -34,6 +34,7 @@
   ]
 }
 </script>
+<script defer src="https://analytics.digitalplat.org/static/analytics.js" data-property="dpa_kOw1KWCyxdm1ndBFeWG8Ztl09Nwl7xM"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -81,16 +82,57 @@
           <div class="ticket-num"><span>Reach us</span><span class="punch"></span></div>
           <h3>General inquiries</h3>
           <p style="margin-bottom:10px;">
-            Email: <span class="mono">[add company email — e.g. hello@bluebirdenterprise.ug]</span><br>
-            WhatsApp: <span class="mono">[add company WhatsApp number]</span>
+            Phone / WhatsApp: <a class="mono" href="tel:+256790014428">+256 790 014 428</a><br>
+            Email: <a class="mono" href="mailto:trebronwayne@gmail.com">trebronwayne@gmail.com</a><br>
+            Alt. email: <a class="mono" href="mailto:nlamn.dev@outlook.com">nlamn.dev@outlook.com</a>
           </p>
-          <p style="font-size:13px;">Placeholders — swap in your real company email and number when ready.</p>
+          <p style="font-size:13px;color:var(--text-muted);">Client Relations typically responds within 1 business day.</p>
         </div>
 
-        <div class="ticket">
+        <div class="ticket" style="margin-bottom:24px;">
           <div class="ticket-num"><span>Security</span><span class="punch"></span></div>
           <h3>Reporting a vulnerability</h3>
           <p>Please don't open a public issue. Report privately with the subject line <span class="mono">[SECURITY] Brief description</span>, or use GitHub's private Security Advisory feature on the relevant repository. We acknowledge reports within 72 hours and credit reporters in release notes unless they prefer to stay anonymous.</p>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket-num"><span>Send a message</span><span class="punch"></span></div>
+          <h3>Request a quote</h3>
+          <form action="https://formsubmit.co/trebronwayne@gmail.com" method="POST" novalidate style="margin-top:12px;display:grid;gap:14px;">
+            <input type="hidden" name="_subject" value="New inquiry — Bluebird Enterprise website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <div>
+              <label for="cf-name" style="display:block;font-family:var(--font-mono);font-size:12px;color:var(--text-muted);margin-bottom:6px;">Full name *</label>
+              <input id="cf-name" name="name" type="text" required autocomplete="name" style="width:100%;padding:10px 12px;border-radius:var(--radius-sm);border:1px solid var(--line-soft);background:var(--paper-raised);color:var(--text);font-family:var(--font-body);font-size:14px;">
+            </div>
+            <div>
+              <label for="cf-email" style="display:block;font-family:var(--font-mono);font-size:12px;color:var(--text-muted);margin-bottom:6px;">Email *</label>
+              <input id="cf-email" name="email" type="email" required autocomplete="email" style="width:100%;padding:10px 12px;border-radius:var(--radius-sm);border:1px solid var(--line-soft);background:var(--paper-raised);color:var(--text);font-family:var(--font-body);font-size:14px;">
+            </div>
+            <div>
+              <label for="cf-phone" style="display:block;font-family:var(--font-mono);font-size:12px;color:var(--text-muted);margin-bottom:6px;">Phone / WhatsApp</label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" style="width:100%;padding:10px 12px;border-radius:var(--radius-sm);border:1px solid var(--line-soft);background:var(--paper-raised);color:var(--text);font-family:var(--font-body);font-size:14px;">
+            </div>
+            <div>
+              <label for="cf-dept" style="display:block;font-family:var(--font-mono);font-size:12px;color:var(--text-muted);margin-bottom:6px;">What do you need? *</label>
+              <select id="cf-dept" name="department" required style="width:100%;padding:10px 12px;border-radius:var(--radius-sm);border:1px solid var(--line-soft);background:var(--paper-raised);color:var(--text);font-family:var(--font-body);font-size:14px;">
+                <option value="">Select one</option>
+                <option value="Digital Presence">Website / App (Digital Presence)</option>
+                <option value="Creative & Design">Design / Branding (Creative &amp; Design)</option>
+                <option value="Digital & Physical Content">Printing / Typing / Scanning</option>
+                <option value="Hardware & Technical">Repair / Networking / CCTV (Hardware &amp; Technical)</option>
+                <option value="Other">Something else</option>
+              </select>
+            </div>
+            <div>
+              <label for="cf-message" style="display:block;font-family:var(--font-mono);font-size:12px;color:var(--text-muted);margin-bottom:6px;">Details *</label>
+              <textarea id="cf-message" name="message" rows="4" required style="width:100%;padding:10px 12px;border-radius:var(--radius-sm);border:1px solid var(--line-soft);background:var(--paper-raised);color:var(--text);font-family:var(--font-body);font-size:14px;resize:vertical;"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit" style="justify-self:start;">Send message</button>
+            <p style="font-size:12px;color:var(--text-muted);margin:0;">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>. We only use your details to respond to this inquiry.</p>
+          </form>
         </div>
       </div>
 
@@ -177,6 +219,13 @@
         <h4>Elsewhere</h4>
         <ul>
           <li><a href="contact.html#community">Community links</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
         </ul>
       </div>
     </div>
