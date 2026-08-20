@@ -534,3 +534,21 @@ footer.site-footer a:hover{color:#fff;}
   html{scroll-behavior:auto;}
   *{transition:none !important;animation:none !important;}
 }
+
+/* Cookie / analytics notice */
+.cookie-notice{
+  position:fixed;left:0;right:0;bottom:0;z-index:200;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;
+  padding:14px 20px;
+  background:var(--ink);border-top:1px solid rgba(255,255,255,0.1);
+  box-shadow:0 -4px 18px rgba(0,0,0,0.18);
+}
+.cookie-notice p{
+  margin:0;color:var(--text-on-ink-muted);font-size:13px;max-width:60ch;text-align:center;
+}
+.cookie-notice a{color:var(--text-on-ink);text-decoration:underline;}
+.cookie-notice .btn{padding:8px 16px;font-size:13px;flex-shrink:0;}
+@media (max-width:600px){
+  .cookie-notice{padding:14px 16px;}
+  .cookie-notice p{font-size:12px;}
+}
