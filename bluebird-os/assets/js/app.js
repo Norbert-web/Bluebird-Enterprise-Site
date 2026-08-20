@@ -202,3 +202,24 @@
 
   /* download button handled by startFeaturedDownload() above */
 })();
+
+// Bluebird Enterprise — cookie / analytics notice (shared with main site)
+(function(){
+  var KEY = 'be-notice-ack';
+  if (localStorage.getItem(KEY)) return;
+
+  var bar = document.createElement('div');
+  bar.className = 'cookie-notice';
+  bar.setAttribute('role', 'region');
+  bar.setAttribute('aria-label', 'Cookie notice');
+  bar.innerHTML =
+    '<p>This site uses basic analytics to understand traffic. See our ' +
+    '<a href="../privacy.html">Privacy Policy</a>.</p>' +
+    '<button type="button" class="btn btn-outline btn-sm" id="cookie-ack">Got it</button>';
+  document.body.appendChild(bar);
+
+  document.getElementById('cookie-ack').addEventListener('click', function(){
+    localStorage.setItem(KEY, '1');
+    bar.remove();
+  });
+})();
