@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bluebird OS — Windows 11 Desktop Launcher for Android · v1.7 · Open Source from Uganda</title>
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="canonical" href="https://bluebirduganda.dpdns.org/bluebird-os/index.html">
+
+<!-- SEO -->
+<meta name="description" content="Bluebird OS — free, open-source Android desktop launcher from Uganda. Run a full Windows 11-style desktop experience on any Android phone. No root needed. Built by Bluebird Enterprise.">
+<meta name="keywords" content="Bluebird OS, Android launcher, desktop mode, Android OS simulator, Uganda tech, open source Android, Windows 11 Android, Bluebird Enterprise">
+<meta name="author" content="Norbert (LAMN-NOBERT)">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bluebird OS — Android Desktop Launcher · v1.7">
+<meta property="og:description" content="Run a full desktop OS experience on your Android phone. Free, open source, built in Uganda. No root needed.">
+<meta property="og:image" content="https://bluebirduganda.dpdns.org/bluebird-os/assets/img/screenshots/desktop.png">
+<meta property="og:url" content="https://bluebirduganda.dpdns.org/bluebird-os/">
+<meta property="og:site_name" content="Bluebird OS — by Bluebird Enterprise">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@norbertlamn">
+<meta name="twitter:title" content="Bluebird OS — Android Desktop Launcher · v1.7">
+<meta name="twitter:description" content="Run a full desktop OS experience on your Android phone. Free, open source, built in Uganda.">
+<meta name="twitter:image" content="https://bluebirduganda.dpdns.org/bluebird-os/assets/img/screenshots/desktop.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Bluebird OS",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Android 8.0+",
+  "description": "Free, open-source Android desktop launcher and OS simulator that gives any Android phone a real desktop mode — no root required.",
+  "softwareVersion": "1.7",
+  "url": "https://bluebirduganda.dpdns.org/bluebird-os/index.html",
+  "image": "https://bluebirduganda.dpdns.org/bluebird-os/assets/img/screenshots/desktop.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Bluebird Enterprise",
+    "url": "https://bluebirduganda.dpdns.org/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "license": "https://opensource.org/licenses/MIT"
+}
+</script>
+</head>
+<body>
+
+<!-- ═══════════ PARENT SITE BAR ═══════════ -->
+<div class="parent-bar">
+  <a href="../index.html">← Bluebird Enterprise</a>
+  <span>Bluebird OS is our flagship open-source product</span>
+</div>
+
+<!-- ═══════════ NAV ═══════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="logo" onclick="go('home')">
+      <div class="logo-mark">
+        <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="42" height="42" rx="10" fill="url(#lg1)"/>
+          <path d="M9 24C9 24 12 14 21 14C28 14 33 20 33 20C33 20 28 17 22 19C22 19 30 22 30 28C30 28 25 24 21 25C21 25 26 29 24 33C24 33 19 28 18 24C18 24 14 27 9 24Z" fill="white" opacity="0.95"/>
+          <circle cx="28" cy="16" r="2" fill="#FCDC04"/>
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#1a90ff"/>
+              <stop offset="1" stop-color="#0c6fd4"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-name">Bluebird <span>OS</span></div>
+        <div class="logo-tag">Open Source · Uganda</div>
+      </div>
+    </a>
+
+    <button class="hamburger" id="ham" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a onclick="go('home')" data-page="home" class="active">Home</a></li>
+      <li><a onclick="go('releases')" data-page="releases">Releases</a></li>
+      <li><a onclick="go('apps')" data-page="apps">Apps</a></li>
+      <li><a onclick="go('docs')" data-page="docs">Docs</a></li>
+      <li><a onclick="go('community')" data-page="community">Community</a></li>
+      <li><a onclick="go('about')" data-page="about">About</a></li>
+      <li><a onclick="triggerDownload('v1.7')" data-page="downloads" class="nav-download">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:2px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+      </a></li>
+    </ul>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <!-- Sun icon (shown in dark mode) -->
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <!-- Moon icon (shown in light mode) -->
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile overlay -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main>
+
+<!-- ═══════════ HOME ═══════════ -->
+<div class="page active" id="page-home">
+
+  <div class="hero">
+    <div class="hero-eyebrow">
+      <span class="pill">v1.7 STABLE</span>
+      <span>Built in Uganda for the world</span>
+    </div>
+    <h1>The Android OS<br>that lives<br><span class="accent">inside Android.</span></h1>
+    <p class="hero-desc">
+      Bluebird is a free, open-source Android OS simulator and launcher. Run a full Android environment inside your phone — with a real desktop mode, built-in apps, and multitasking that feels native.
+    </p>
+    <div class="feature-pills">
+      <span class="feature-pill"><span class="dot"></span>OS Simulator</span>
+      <span class="feature-pill"><span class="dot"></span>Launcher Mode</span>
+      <span class="feature-pill"><span class="dot"></span>Desktop Mode</span>
+      <span class="feature-pill"><span class="dot"></span>Built-in App Suite</span>
+      <span class="feature-pill"><span class="dot"></span>100% Free &amp; Open Source</span>
+      <span class="feature-pill" style="border-color:rgba(252,220,4,0.3);color:var(--ugandan-yellow);">
+        <span class="dot" style="background:var(--ugandan-yellow-raw);"></span>Made in Uganda
+      </span>
+    </div>
+    <div class="hero-actions">
+      <button class="btn btn-primary btn-lg" onclick="triggerDownload('v1.7')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download v1.7
+      </button>
+      <button class="btn btn-ghost btn-lg" onclick="go('releases')">View All Releases</button>
+      <a class="btn btn-outline btn-lg" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">1<span>.7</span></div>
+        <div class="stat-label">Current Stable</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Major Releases</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num"><span style="color:var(--ugandan-yellow);">∞</span></div>
+        <div class="stat-label">Open Source · MIT</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">API <span>26</span>+</div>
+        <div class="stat-label">Android Compatibility</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ SCREENSHOTS ═══ -->
+  <div class="container">
+    <div class="section" style="padding-top:0;">
+      <div class="section-head">
+        <div class="section-eyebrow">See It In Action</div>
+        <h2 class="section-title">A real desktop.<br>On your phone.</h2>
+        <p class="section-subtitle">Bluebird v1.7 running on Android — Windows 11 desktop, snap layouts, floating windows, weather widget, and a full built-in app suite.</p>
+      </div>
+      <div class="ss-grid-3">
+        <div class="ss-thumb" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow-card);aspect-ratio:9/16;" onclick="openLightbox('assets/img/screenshots/desktop.png','Desktop — Bluebird v1.7')">
+          <img src="assets/img/screenshots/desktop.png" alt="Bluebird Desktop" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        </div>
+        <div class="ss-thumb" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow-card);aspect-ratio:9/16;" onclick="openLightbox('assets/img/screenshots/startmenu.png','Start Menu — Bluebird v1.7')">
+          <img src="assets/img/screenshots/startmenu.png" alt="Bluebird Start Menu" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        </div>
+        <div class="ss-thumb" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow-card);aspect-ratio:9/16;" onclick="openLightbox('assets/img/screenshots/explorer.png','File Explorer — Bluebird v1.7')">
+          <img src="assets/img/screenshots/explorer.png" alt="Bluebird File Explorer" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        </div>
+      </div>
+      <div class="ss-grid-2">
+        <div class="ss-thumb" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow-card);aspect-ratio:16/9;" onclick="openLightbox('assets/img/screenshots/editor.png','Text Editor — Syntax Highlighting · Bluebird v1.7')">
+          <img src="assets/img/screenshots/editor.png" alt="Bluebird Text Editor" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        </div>
+        <div class="ss-thumb" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:var(--shadow-card);aspect-ratio:16/9;" onclick="openLightbox('assets/img/screenshots/settings.png','Settings — 12 Categories · Bluebird v1.7')">
+          <img src="assets/img/screenshots/settings.png" alt="Bluebird Settings" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--text-dim);font-size:0.8rem;margin-top:14px;font-family:var(--font-mono);">Bluebird v1.7 screenshots · <code>tap to enlarge</code> · Taken on Techno Pop 9</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="section-head">
+        <div class="section-eyebrow">What is Bluebird?</div>
+        <h2 class="section-title">An entire Android<br>experience, layered on top.</h2>
+        <p class="section-subtitle">Bluebird isn't just a launcher. It simulates an independent Android OS environment — complete with windowed apps, a taskbar, file manager, and full desktop mode that transforms any phone into a PC.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Desktop Mode</h3>
+          <p>Plug in your phone to a monitor or just use it in hand — Bluebird's desktop mode gives you a real windowed experience with a taskbar, window controls, and proper multitasking.</p>
+          <span class="tag tag-stable" style="margin-top:12px;">Core Feature</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3>OS Simulator + Launcher</h3>
+          <p>Act as your home launcher or boot as a full simulator. Bluebird intercepts and manages your Android environment — giving you a completely different feel without rooting.</p>
+          <span class="tag tag-stable" style="margin-top:12px;">No Root Needed</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Built-in App Suite</h3>
+          <p>Comes pre-loaded with essential tools: file manager, browser, settings, app store, terminal, calculator, and more — all designed to feel native inside the Bluebird environment.</p>
+          <span class="tag tag-latest" style="margin-top:12px;">Growing Ecosystem</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Lightweight &amp; Fast</h3>
+          <p>Bluebird is engineered to be low-overhead. We avoid bloat intentionally so it runs smoothly even on older or budget Android devices common across East Africa and beyond.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Fully Open Source</h3>
+          <p>Every line of Bluebird is public. Inspect the code, contribute fixes, build your own fork, or ship your app through our ecosystem. MIT license. No tracking, no ads, no telemetry.</p>
+          <span class="tag tag-oss" style="margin-top:12px;">MIT Licensed</span>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Born in Uganda</h3>
+          <p>Built by Norbert (also known online as LAMN-NOBERT), based in Uganda, with a global vision. Bluebird is proof that world-class software is being made right here in East Africa.</p>
+          <span class="tag tag-soon" style="margin-top:12px;">East African Tech</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice notice-yellow">
+      <span class="notice-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </span>
+      <div><strong style="color:var(--ugandan-yellow);">v1.8 is under development &amp; v1.9 is in planning!</strong> — v1.8 brings terminal support and web app installation. <a onclick="go('releases')" style="cursor:pointer;">Track the roadmap &rarr;</a></div>
+    </div>
+
+    <!-- ROADMAP PREVIEW -->
+    <div style="margin-bottom:60px;">
+      <div class="section-head">
+        <div class="section-eyebrow">What's Next</div>
+        <h2 class="section-title">Roadmap</h2>
+        <p class="section-subtitle">v1.7 is now live. v1.8 is under active development, and v1.9 is in planning.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px 32px;box-shadow:var(--shadow-card);">
+        <div class="roadmap-item">
+          <div class="roadmap-dot" style="background:rgba(252,220,4,0.15);border:1px solid rgba(252,220,4,0.3);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+              <span style="font-family:var(--font-head);font-weight:700;color:var(--text);">v1.6</span>
+              <span class="tag tag-soon">In Development</span>
+            </div>
+            <p style="color:var(--text-dim);font-size:0.875rem;line-height:1.6;">Major bug fixes across desktop, windows, and system apps — plus new functionalities and stability improvements.</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-dot" style="background:rgba(252,220,4,0.08);border:1px solid rgba(252,220,4,0.15);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+              <span style="font-family:var(--font-head);font-weight:700;color:var(--text);">v1.7</span>
+              <span class="tag tag-soon">Planned</span>
+            </div>
+            <p style="color:var(--text-dim);font-size:0.875rem;line-height:1.6;">Desktop icon fixes, taskbar icon overlap fixes, cleaner UI, weather API widget panel, improved landscape mode and overall stability. <a onclick="go('downloads')" style="cursor:pointer;color:var(--sky);font-weight:600;">Download v1.7 →</a></p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-dot" style="background:rgba(252,220,4,0.06);border:1px solid rgba(252,220,4,0.12);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+              <span style="font-family:var(--font-head);font-weight:700;color:var(--text);">v1.9</span>
+              <span class="tag tag-soon">Planned</span>
+            </div>
+            <p style="color:var(--text-dim);font-size:0.875rem;line-height:1.6;">In planning — continued improvements and new features building on v1.8's terminal and web app foundations.</p>
+          </div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-dot" style="background:rgba(26,144,255,0.1);border:1px solid rgba(26,144,255,0.2);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <div style="flex:1;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+              <span style="font-family:var(--font-head);font-weight:700;color:var(--text);">Future</span>
+              <span class="tag tag-latest">Ideas</span>
+            </div>
+            <p style="color:var(--text-dim);font-size:0.875rem;line-height:1.6;">Resizable floating windows, widget support, taskbar auto-hide, multiple virtual desktops, and more.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:16px;">
+        <button class="btn btn-ghost" onclick="go('releases')">Full Release History →</button>
+        <a class="btn btn-outline" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener" style="margin-left:8px;">GitHub</a>
+      </div>
+    </div>
+
+    <div class="oss-banner" style="margin-bottom:80px;">
+      <h2>Free. Open. Made in Uganda by Norbert.</h2>
+      <p>Bluebird is and always will be free and open source. We believe great software should be accessible to everyone — no paywalls, no subscriptions, no hidden costs.</p>
+      <div class="oss-links">
+        <a class="btn btn-primary" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">View Source on GitHub</a>
+        <button class="btn btn-ghost" onclick="go('about')">Our Story</button>
+        <button class="btn btn-outline" onclick="go('community')">Join the Community</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════ RELEASES ═══════════ -->
+<div class="page" id="page-releases">
+  <div class="container">
+    <div class="section">
+      <div class="section-head">
+        <div class="section-eyebrow">Release History</div>
+        <h2 class="section-title">Every version, documented.</h2>
+        <p class="section-subtitle">Bluebird follows a simple, predictable versioning scheme. Stable releases are tested thoroughly before ship.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rtable">
+          <thead>
+            <tr>
+              <th>Version</th>
+              <th>Release Date</th>
+              <th>Status</th>
+              <th>Android API</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="ver-badge">v1.9</span></td>
+              <td style="color:var(--ugandan-yellow);font-family:var(--font-mono);font-size:0.82rem;">Planned</td>
+              <td><span class="tag tag-soon">Planned</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-ghost btn-sm" onclick="go('community')">Track Progress</button></td>
+            </tr>
+            <tr>
+              <td><span class="ver-badge">v1.8</span></td>
+              <td style="color:var(--ugandan-yellow);font-family:var(--font-mono);font-size:0.82rem;">In Development</td>
+              <td><span class="tag tag-soon">Under Development</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-yellow btn-sm" onclick="go('community')">Track Progress</button></td>
+            </tr>
+            <tr>
+              <td><span class="ver-badge">v1.7</span> <span class="tag tag-latest" style="margin-left:6px;">Latest</span></td>
+              <td style="font-family:var(--font-mono);font-size:0.82rem;">2026</td>
+              <td><span class="tag tag-stable">Stable</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-primary btn-sm" onclick="triggerDownload('v1.7')">Download</button></td>
+            </tr>
+            <tr>
+              <td><span class="ver-badge">v1.6</span></td>
+              <td style="font-family:var(--font-mono);font-size:0.82rem;">2026</td>
+              <td><span class="tag tag-stable">Stable</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-ghost btn-sm" onclick="triggerDownload('v1.6')">Download</button></td>
+            </tr>
+            <tr>
+              <td><span class="ver-badge">v1.5</span></td>
+              <td style="font-family:var(--font-mono);font-size:0.82rem;">2026</td>
+              <td><span class="tag tag-stable">Stable</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-ghost btn-sm" onclick="triggerDownload('v1.5')">Download</button></td>
+            </tr>
+            <tr>
+              <td><span class="ver-badge">v1.4</span></td>
+              <td style="font-family:var(--font-mono);font-size:0.82rem;">2026</td>
+              <td><span class="tag tag-stable">Stable</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-ghost btn-sm" onclick="triggerDownload('v1.4')">Download</button></td>
+            </tr>
+            <tr>
+              <td><span class="ver-badge">v1.3</span></td>
+              <td style="font-family:var(--font-mono);font-size:0.82rem;">2026</td>
+              <td><span class="tag tag-stable">Stable</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-ghost btn-sm" onclick="triggerDownload('v1.3')">Download</button></td>
+            </tr>
+            <tr>
+              <td><span class="ver-badge">v1.2</span></td>
+              <td style="font-family:var(--font-mono);font-size:0.82rem;">2026</td>
+              <td><span class="tag tag-stable">Stable</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-ghost btn-sm" onclick="triggerDownload('v1.2')">Download</button></td>
+            </tr>
+            <tr>
+              <td><span class="ver-badge">v1.1</span></td>
+              <td style="font-family:var(--font-mono);font-size:0.82rem;">2026</td>
+              <td><span class="tag tag-stable">Stable</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-ghost btn-sm" onclick="triggerDownload('v1.1')">Download</button></td>
+            </tr>
+            <tr>
+              <td><span class="ver-badge">v1.0</span></td>
+              <td style="font-family:var(--font-mono);font-size:0.82rem;">2026</td>
+              <td><span class="tag tag-stable">First Release</span></td>
+              <td>26+</td>
+              <td><button class="btn btn-ghost btn-sm" onclick="triggerDownload('v1.0')">Download</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:40px;">
+        <div class="section-eyebrow">Changelogs</div>
+        <h3 style="font-family:var(--font-head);font-size:1.4rem;font-weight:700;letter-spacing:-0.5px;margin-bottom:20px;color:var(--text);">What changed in each version</h3>
+
+        <div class="cl-entry">
+          <div class="cl-header">
+            <div>
+              <span class="tag tag-stable" style="margin-bottom:6px;display:inline-block;">RELEASED</span>
+              <div class="cl-ver">v1.7 <span class="cl-codename">— Stable</span></div>
+            </div>
+            <span class="cl-date">2026</span>
+          </div>
+          <div class="cl-body">
+            <ul class="cl-list">
+              <li><strong>Desktop &amp; Taskbar:</strong> Fixed desktop icons going off-screen in landscape mode; fixed taskbar icon overlapping when many icons are added</li>
+              <li><strong>UI:</strong> Removed text labels on built-in app taskbar icons for a cleaner, more minimal look</li>
+              <li><strong>Widget Panel:</strong> Polished design, new features, and working weather API integration</li>
+              <li><strong>Stability:</strong> Improved overall system stability, desktop responsiveness, and multitasking layout handling</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cl-entry">
+          <div class="cl-header">
+            <div>
+              <span class="tag tag-soon" style="margin-bottom:6px;display:inline-block;">IN DEVELOPMENT</span>
+              <div class="cl-ver">v1.6 <span class="cl-codename">— Coming Soon</span></div>
+            </div>
+            <span class="cl-date">ETA: TBA</span>
+          </div>
+          <div class="cl-body">
+            <ul class="cl-list">
+              <li>Major bug fixes across desktop, windows, and system apps</li>
+              <li>New functionalities and expanded built-in app capabilities</li>
+              <li>Performance improvements and stability gains</li>
+              <li>Refined UI details and interaction feedback</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cl-entry">
+          <div class="cl-header">
+            <div>
+              <span class="tag tag-latest" style="margin-bottom:6px;display:inline-block;">CURRENT STABLE</span>
+              <div class="cl-ver">v1.5</div>
+            </div>
+            <span class="cl-date">2026</span>
+          </div>
+          <div class="cl-body">
+            <ul class="cl-list">
+              <li>Advanced window management system with smoother interactions</li>
+              <li>Snap layout picker — Windows 11–style layout overlay</li>
+              <li>Scrollable desktop when screen fills with icons</li>
+              <li>Replaced macOS-style traffic light controls with a more native look</li>
+              <li>Default wallpaper now shown automatically on first launch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cl-entry">
+          <div class="cl-header">
+            <div class="cl-ver">v1.4</div>
+            <span class="cl-date">2026</span>
+          </div>
+          <div class="cl-body">
+            <ul class="cl-list">
+              <li>Fixed app update system HTTPS 404 errors</li>
+              <li>Fixed invisible desktop dead zones blocking icon drag</li>
+              <li>Fixed icon overlapping when many icons added to desktop</li>
+              <li>Improved drag-and-drop experience and icon placement</li>
+              <li>Better update checking reliability via GitHub</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cl-entry">
+          <div class="cl-header">
+            <div class="cl-ver">v1.3</div>
+            <span class="cl-date">2026</span>
+          </div>
+          <div class="cl-body">
+            <ul class="cl-list">
+              <li>Complete in-app update system — checks and downloads updates from GitHub</li>
+              <li>Post notifications for update availability, download progress, and completion</li>
+              <li>Start menu polished for a more professional appearance</li>
+              <li>Expanded settings and app management options</li>
+              <li>Improved background task handling and overall stability</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cl-entry">
+          <div class="cl-header">
+            <div class="cl-ver">v1.2</div>
+            <span class="cl-date">2026</span>
+          </div>
+          <div class="cl-body">
+            <ul class="cl-list">
+              <li>Brand-new Start Menu with a modern, cleaner design</li>
+              <li>Syntax and code highlighting added to the text editor</li>
+              <li>Enhanced text editing capabilities and editor responsiveness</li>
+              <li>Smoother transitions and overall UI consistency improvements</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cl-entry">
+          <div class="cl-header">
+            <div class="cl-ver">v1.1</div>
+            <span class="cl-date">2026</span>
+          </div>
+          <div class="cl-body">
+            <ul class="cl-list">
+              <li>Added multiple wallpaper modes — default, 5 built-in, and automatic cycling</li>
+              <li>Fixed app icons going off-screen on some devices</li>
+              <li>Improved app stability and responsiveness across Android devices</li>
+              <li>Minor UI rendering fixes and visual consistency improvements</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cl-entry">
+          <div class="cl-header">
+            <div class="cl-ver">v1.0 — <span class="cl-codename">First Public Release</span></div>
+            <span class="cl-date">2026</span>
+          </div>
+          <div class="cl-body">
+            <ul class="cl-list">
+              <li>Initial public release — full Windows 11–style desktop launcher</li>
+              <li>Floating windowed app system, taskbar, Start Menu, and Action Center</li>
+              <li>Real file explorer, phone dialer, SMS, media player, image viewer, Recycle Bin</li>
+              <li>First-launch OOBE wizard with permissions, username, and avatar setup</li>
+              <li>Open-sourced on GitHub under MIT license — API 26+ (Android 8.0+)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice" style="margin-top:32px;">
+        <span class="notice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        </span>
+        <div>Have a bug to report or a feature to suggest? <a href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Open an issue on GitHub</a> or join the <a onclick="go('community')" style="cursor:pointer;">community forum</a>. Every version of Bluebird is shaped by its users.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ APPS ═══════════ -->
+<div class="page" id="page-apps">
+  <div class="container">
+    <div class="section">
+      <div class="section-head">
+        <div class="section-eyebrow">App Ecosystem</div>
+        <h2 class="section-title">Apps from our team<br>and community.</h2>
+        <p class="section-subtitle">Download and share apps built by Norbert (LAMN-NOBERT) and verified community developers. All apps are reviewed before listing.</p>
+      </div>
+
+      <div class="notice notice-green">
+        <span class="notice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        <div><strong style="color:#16a34a;">All apps are free and open source.</strong> Apps listed here are built by our team or trusted contributors. Want to submit your app? <a href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">See our contribution guide on GitHub.</a></div>
+      </div>
+
+      <div style="margin-bottom:40px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+          <span class="tag tag-latest">Official — Norbert (LAMN-NOBERT)</span>
+        </div>
+
+        <div class="app-listing">
+          <div class="app-listing-icon" style="background:rgba(26,144,255,0.12);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="app-listing-info">
+            <div class="app-listing-name">Bluebird Browser <span class="bwa-badge">.bwa</span></div>
+            <div class="app-listing-author">by Norbert (LAMN-NOBERT)</div>
+            <div class="app-listing-desc">Lightweight browser built for the Bluebird environment. Tab management, reader mode, and privacy-first design.</div>
+          </div>
+          <div class="app-listing-actions">
+            <a class="btn btn-primary btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS/releases/download/apps/Bluebird-Browser.bwa" download>Download</a>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+
+        <div class="app-listing">
+          <div class="app-listing-icon" style="background:rgba(252,220,4,0.12);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="app-listing-info">
+            <div class="app-listing-name">Bluebird Files <span class="bwa-badge">.bwa</span></div>
+            <div class="app-listing-author">by Norbert (LAMN-NOBERT)</div>
+            <div class="app-listing-desc">Full-featured file manager with desktop mode support, split view, and cloud integration hooks.</div>
+          </div>
+          <div class="app-listing-actions">
+            <a class="btn btn-primary btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS/releases/download/apps/Bluebird-Files.bwa" download>Download</a>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+
+        <div class="app-listing">
+          <div class="app-listing-icon" style="background:rgba(34,197,94,0.1);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          </div>
+          <div class="app-listing-info">
+            <div class="app-listing-name">Bluebird Terminal <span class="bwa-badge">.bwa</span></div>
+            <div class="app-listing-author">by Norbert (LAMN-NOBERT)</div>
+            <div class="app-listing-desc">Shell terminal with syntax highlighting, session management, and SSH support. Runs natively in Bluebird's windowed mode.</div>
+          </div>
+          <div class="app-listing-actions">
+            <a class="btn btn-primary btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS/releases/download/apps/Bluebird-Terminal.bwa" download>Download</a>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+
+        <div class="app-listing">
+          <div class="app-listing-icon" style="background:rgba(217,0,0,0.1);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="app-listing-info">
+            <div class="app-listing-name">Bluebird Notes <span class="bwa-badge">.bwa</span></div>
+            <div class="app-listing-author">by Norbert (LAMN-NOBERT)</div>
+            <div class="app-listing-desc">Markdown-first note-taking app with local storage. No cloud required — your notes stay on your device.</div>
+          </div>
+          <div class="app-listing-actions">
+            <a class="btn btn-primary btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS/releases/download/apps/Bluebird-Notes.bwa" download>Download</a>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+
+        <div class="app-listing">
+          <div class="app-listing-icon" style="background:rgba(124,58,237,0.12);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <div class="app-listing-info">
+            <div class="app-listing-name">Bluebird Music <span class="bwa-badge">.bwa</span></div>
+            <div class="app-listing-author">by Norbert (LAMN-NOBERT)</div>
+            <div class="app-listing-desc">Local music player with playlist management and a clean windowed UI perfect for desktop mode.</div>
+          </div>
+          <div class="app-listing-actions">
+            <a class="btn btn-primary btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS/releases/download/apps/Bluebird-Music.bwa" download>Download</a>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+
+        <div class="app-listing" style="border-color:rgba(252,220,4,0.25);background:rgba(252,220,4,0.04);">
+          <div class="app-listing-icon" style="background:rgba(252,220,4,0.12);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <div class="app-listing-info">
+            <div class="app-listing-name">Submit Your App</div>
+            <div class="app-listing-author">Community Developers</div>
+            <div class="app-listing-desc">Build an app for Bluebird and get it listed here. Open source required. <a href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener" style="color:var(--ugandan-yellow);text-decoration:none;font-weight:600;">Submit via GitHub &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-eyebrow" style="margin-top:40px;">More Apps by Norbert</div>
+      <p style="color:var(--text-dim);font-size:0.875rem;margin-bottom:24px;margin-top:8px;">Standalone apps built by Norbert — installable as Bluebird Web Apps <span class="bwa-badge">.bwa</span> or usable independently.</p>
+
+      <div class="app-card-grid">
+
+        <!-- Math Labs -->
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-card-icon" style="background:rgba(26,144,255,0.12);">🧮</div>
+            <div>
+              <div class="app-card-title">Math Labs</div>
+              <div class="app-card-author">by Norbert (LAMN-NOBERT)</div>
+            </div>
+          </div>
+          <p class="app-card-desc">Interactive mathematics lab — graphing, algebra, geometry, calculus tools, and step-by-step problem solving. Built for students and educators.</p>
+          <div class="app-card-footer">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag tag-stable">Education</span>
+              <span class="bwa-badge">.bwa</span>
+            </div>
+            <div style="display:flex;gap:6px;">
+              <a class="btn btn-primary btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS/releases/download/apps/MathLabs.bwa" download>Download</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Remote Schools -->
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-card-icon" style="background:rgba(252,220,4,0.12);">🏫</div>
+            <div>
+              <div class="app-card-title">Remote Schools</div>
+              <div class="app-card-author">by Norbert (LAMN-NOBERT)</div>
+            </div>
+          </div>
+          <p class="app-card-desc">Education platform built on Uganda's national curriculum. Lessons, exercises, and assessments for primary and secondary students — fully offline capable.</p>
+          <div class="app-card-footer">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag tag-stable">Education</span>
+              <span class="tag tag-soon">Uganda Curriculum</span>
+            </div>
+            <div style="display:flex;gap:6px;">
+              <a class="btn btn-primary btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS/releases/download/apps/RemoteSchools.bwa" download>Download</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EchoChamber -->
+        <div class="app-card">
+          <div class="app-card-header">
+            <div class="app-card-icon" style="background:rgba(124,58,237,0.12);">🔁</div>
+            <div>
+              <div class="app-card-title">EchoChamber</div>
+              <div class="app-card-author">by Norbert (LAMN-NOBERT)</div>
+            </div>
+          </div>
+          <p class="app-card-desc">Text editor with a twist — the <em>Repeat</em> feature lets you repeat any text block up to 200,000 times. Great for generating test data, patterns, or just having fun with repetition.</p>
+          <div class="app-card-footer">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag tag-beta">Text Editor</span>
+              <span class="bwa-badge">.bwa</span>
+            </div>
+            <div style="display:flex;gap:6px;">
+              <a class="btn btn-primary btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS/releases/download/apps/EchoChamber.bwa" download>Download</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Virtual Physical Environment Simulator -->
+        <div class="app-card" style="border-color:rgba(252,220,4,0.2);background:rgba(252,220,4,0.02);">
+          <div class="app-card-header">
+            <div class="app-card-icon" style="background:rgba(252,220,4,0.12);">⚗️</div>
+            <div>
+              <div class="app-card-title">Virtual Physical Environment Simulator</div>
+              <div class="app-card-author">by Norbert (LAMN-NOBERT)</div>
+            </div>
+          </div>
+          <p class="app-card-desc">Simulates real-world school lab experiments, physical phenomena, and scientific environments. Built as an extension of Remote Schools — bringing practical science to any device without a lab.</p>
+          <div class="app-card-footer">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag tag-stable">Science</span>
+              <span class="tag tag-soon">Part of Remote Schools</span>
+            </div>
+            <div style="display:flex;gap:6px;">
+              <a class="btn btn-primary btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS/releases/download/apps/VPES.bwa" download>Download</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="notice notice-yellow" style="margin-top:8px;">
+        <span class="notice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </span>
+        <div><strong style="color:var(--ugandan-yellow);">.bwa files install directly in Bluebird.</strong> Open Bluebird, go to the App Store, tap Install from file, and select the .bwa. If you don't have Bluebird yet — <a onclick="triggerDownload('v1.7')" style="cursor:pointer;">download it first →</a></div>
+      </div>
+
+      <div style="margin-top:32px;border-top:1px solid var(--border);padding-top:32px;">
+        <div class="section-eyebrow" style="margin-bottom:16px;">Submit Your App</div>
+        <div class="app-listing" style="border-color:rgba(252,220,4,0.25);background:rgba(252,220,4,0.04);">
+          <div class="app-listing-icon" style="background:rgba(252,220,4,0.12);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <div class="app-listing-info">
+            <div class="app-listing-name">Build &amp; Submit Your Own .bwa App</div>
+            <div class="app-listing-author">Community Developers</div>
+            <div class="app-listing-desc">Any HTML + JS + CSS app packaged correctly can run in Bluebird. Build something, open source it, and submit via GitHub to get it listed here. <a href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener" style="color:var(--ugandan-yellow);text-decoration:none;font-weight:600;">See the .bwa format spec &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ DOCS ═══════════ -->
+<div class="page" id="page-docs">
+  <div class="container">
+    <div class="section">
+      <div class="section-head">
+        <div class="section-eyebrow">Documentation</div>
+        <h2 class="section-title">Everything you need<br>to use &amp; build Bluebird.</h2>
+        <p class="section-subtitle">From installation to building your own apps inside the Bluebird ecosystem — the docs have you covered.</p>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:40px;">
+        <a class="doc-card" onclick="go('docs')">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h4>Getting Started</h4>
+          <p>Install Bluebird on your Android device, set it as your launcher, and take your first steps inside the OS environment.</p>
+        </a>
+        <a class="doc-card" onclick="go('docs')">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h4>Desktop Mode Guide</h4>
+          <p>Enable and configure desktop mode. Works with external displays or in-hand. Learn window management, taskbar, and keyboard shortcuts.</p>
+        </a>
+        <a class="doc-card" onclick="go('docs')">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <h4>Using Bluebird as a Launcher</h4>
+          <p>Set Bluebird as your default Android launcher. Customize your home screen, app grid, gestures, and themes.</p>
+        </a>
+        <a class="doc-card" onclick="go('docs')">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+          <h4>Built-in Apps Reference</h4>
+          <p>Full guide to every app included in Bluebird — browser, file manager, terminal, notes, music player, and settings.</p>
+        </a>
+        <a class="doc-card" onclick="go('docs')">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <h4>Building Apps for Bluebird</h4>
+          <p>How to build Android apps that integrate with Bluebird's windowed mode and ecosystem APIs. With code examples.</p>
+        </a>
+        <a class="doc-card" onclick="go('docs')">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h4>Contributing to Bluebird</h4>
+          <p>How to set up the dev environment, run tests, submit pull requests, and get your code merged into Bluebird core.</p>
+        </a>
+        <a class="doc-card" onclick="go('docs')">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.51"/></svg></div>
+          <h4>Upgrade Guides</h4>
+          <p>Step-by-step instructions for upgrading from v1.0 → v1.1 → v1.2 → v1.3 → v1.4 → v1.5 → v1.6 → v1.7. Breaking changes are clearly flagged.</p>
+        </a>
+        <a class="doc-card" onclick="go('docs')">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <h4>FAQ &amp; Troubleshooting</h4>
+          <p>Common questions, error messages, and fixes gathered from the community. Updated with every release.</p>
+        </a>
+        <a class="doc-card" onclick="go('releases')">
+          <div class="doc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+          <h4>Changelog Archive</h4>
+          <p>Complete history of every release, every feature, every fix — from v1.0 to today.</p>
+        </a>
+      </div>
+
+      <div class="notice notice-green">
+        <span class="notice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </span>
+        <div>The full documentation portal is live on GitHub. Visit <code>github.com/Norbert-web/BLUEBIRD-PLUS/wiki</code> for detailed guides with screenshots and video walkthroughs. <em>(Docs expansion in progress — contributions welcome!)</em></div>
+      </div>
+
+      <div style="margin-top:32px;">
+        <h3 style="font-family:var(--font-head);font-size:1.2rem;font-weight:700;margin-bottom:16px;letter-spacing:-0.3px;color:var(--text);">Quick Start</h3>
+        <div class="copy-wrap">
+          <pre id="adb-code"><code># Step 1: Download Bluebird APK from the downloads page
+# Step 2: Install via ADB or manually from your file manager
+
+adb install bluebird-v1.7.apk
+
+# Step 3: Set Bluebird as your default launcher
+# Go to Settings → Apps → Default Apps → Home App → Bluebird
+
+# Step 4: For Desktop Mode, connect to a monitor via USB-C/HDMI
+# Or enable it from Bluebird Settings → Display → Desktop Mode
+
+# Step 5: Explore the built-in app suite and customize your environment</code></pre>
+          <button class="copy-btn" onclick="copyCode(this,'adb-code')" aria-label="Copy code">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ COMMUNITY ═══════════ -->
+<div class="page" id="page-community">
+  <div class="container">
+    <div class="section">
+      <div class="section-head">
+        <div class="section-eyebrow">Community</div>
+        <h2 class="section-title">Join the Bluebird community.</h2>
+        <p class="section-subtitle">Bluebird is built in public, with the community. Find us on these platforms, share feedback, report bugs, and help shape the future of the project.</p>
+      </div>
+
+      <div class="social-grid">
+        <!-- GitHub -->
+        <a class="social-card" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">
+          <div class="social-icon" style="background:rgba(255,255,255,0.06);">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--text-dim);"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="social-info">
+            <div class="social-name">GitHub</div>
+            <div class="social-handle">@Norbert-web / BLUEBIRD-PLUS</div>
+            <div class="social-desc">The heart of Bluebird development. Star the repo, file issues, submit PRs, and watch the project grow in real time.</div>
+          </div>
+          <span class="tag tag-oss" style="align-self:flex-start;flex-shrink:0;">Open Source</span>
+        </a>
+
+        <!-- Reddit -->
+        <a class="social-card" href="https://www.reddit.com/user/Nearby_Fruit488/" target="_blank" rel="noopener">
+          <div class="social-icon" style="background:rgba(255,69,0,0.1);">
+            <svg viewBox="0 0 24 24" fill="none" style="color:#ff4500;">
+              <circle cx="12" cy="12" r="10" fill="rgba(255,69,0,0.15)" stroke="none"/>
+              <path d="M20.5 12a1.5 1.5 0 0 0-2.54-1.07c-1.27-.84-2.95-1.36-4.79-1.43l.82-3.83 2.66.56a1.1 1.1 0 1 0 .12-.72l-2.99-.63a.25.25 0 0 0-.3.19l-.9 4.26c-1.87.06-3.57.58-4.84 1.43A1.5 1.5 0 1 0 5.7 13.9a2.67 2.67 0 0 0-.03.4c0 2.07 2.38 3.74 5.33 3.74s5.33-1.67 5.33-3.74a2.67 2.67 0 0 0-.03-.4A1.5 1.5 0 0 0 20.5 12zM9.5 13a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4.5 3.5c-.67.67-2.83.67-3.5 0a.25.25 0 0 1 .35-.35c.46.46 2.34.46 2.8 0a.25.25 0 0 1 .35.35zm-.5-2.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" fill="#ff4500"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <div class="social-name">Reddit</div>
+            <div class="social-handle">u/Nearby_Fruit488</div>
+            <div class="social-desc">Community posts, showcases, and discussions. Share your custom setups, app requests, and device compatibility reports.</div>
+          </div>
+          <span class="tag tag-stable" style="align-self:flex-start;flex-shrink:0;">Discussions</span>
+        </a>
+
+        <!-- TikTok -->
+        <a class="social-card" href="https://tiktok.com/@bluebirdeleases" target="_blank" rel="noopener">
+          <div class="social-icon" style="background:rgba(0,0,0,0.1);">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="color:#333;width:22px;height:22px;">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.29 6.29 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.07a8.16 8.16 0 0 0 4.77 1.52V7.14a4.85 4.85 0 0 1-1-.45z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <div class="social-name">TikTok</div>
+            <div class="social-handle">@bluebirdeleases</div>
+            <div class="social-desc">Short demos, feature highlights, and behind-the-scenes clips. Follow for quick looks at what's new in Bluebird.</div>
+          </div>
+          <span class="tag tag-beta" style="align-self:flex-start;flex-shrink:0;">Clips</span>
+        </a>
+
+        <!-- YouTube -->
+        <a class="social-card" href="https://www.youtube.com/bluebird-releases" target="_blank" rel="noopener">
+          <div class="social-icon" style="background:rgba(255,0,0,0.1);">
+            <svg viewBox="0 0 24 24" fill="none">
+              <rect width="24" height="24" rx="4" fill="rgba(255,0,0,0.15)"/>
+              <path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.2c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.2.7 11.5v2.1c0 2.2.3 4.4.3 4.4s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.6 22 12 22 12 22s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.2.3-4.4v-2.1C23.3 9.2 23 7 23 7z" fill="rgba(255,0,0,0.2)" stroke="#ff0000" stroke-width="1"/>
+              <polygon points="9.5,15.5 15.5,12 9.5,8.5" fill="#ff0000"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <div class="social-name">YouTube</div>
+            <div class="social-handle">@bluebird-releases</div>
+            <div class="social-desc">Demo videos, feature walkthroughs, tutorials, and behind-the-scenes looks at how Bluebird is built. Subscribe for release videos.</div>
+          </div>
+          <span class="tag tag-stable" style="align-self:flex-start;flex-shrink:0;">Tutorials</span>
+        </a>
+
+        <!-- Twitter / X -->
+        <a class="social-card" href="https://twitter.com/norbertlamn" target="_blank" rel="noopener">
+          <div class="social-icon" style="background:rgba(0,0,0,0.08);">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--text);width:20px;height:20px;">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <div class="social-name">X (Twitter)</div>
+            <div class="social-handle">@norbertlamn</div>
+            <div class="social-desc">Follow for release announcements, development previews, and highlights from the East African tech scene.</div>
+          </div>
+          <span class="tag tag-stable" style="align-self:flex-start;flex-shrink:0;">Announcements</span>
+        </a>
+
+        <!-- Telegram -->
+        <a class="social-card" href="https://t.me" target="_blank" rel="noopener">
+          <div class="social-icon" style="background:rgba(26,144,255,0.1);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <div class="social-name">Telegram</div>
+            <div class="social-handle">Bluebird Community</div>
+            <div class="social-desc">Our most active community hub. Ask questions, share screenshots, get help from developers and users alike.</div>
+          </div>
+          <span class="tag tag-latest" style="align-self:flex-start;flex-shrink:0;">Most Active</span>
+        </a>
+
+        <!-- Discord -->
+        <a class="social-card" href="https://discord.com" target="_blank" rel="noopener">
+          <div class="social-icon" style="background:rgba(88,101,242,0.12);">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" fill="#5865F2"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <div class="social-name">Discord</div>
+            <div class="social-handle">Bluebird Dev Server</div>
+            <div class="social-desc">Developer-focused discussion, app building help, design feedback, and voice chats with Norbert (LAMN-NOBERT) on release days.</div>
+          </div>
+          <span class="tag tag-beta" style="align-self:flex-start;flex-shrink:0;">Developers</span>
+        </a>
+      </div>
+
+      <div class="notice notice-yellow">
+        <span class="notice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </span>
+        <div><strong style="color:var(--ugandan-yellow);">Proud to represent East African tech.</strong> Bluebird was started in Uganda and we're committed to giving back to the local tech community. If you're an Android developer in East Africa, <a href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">reach out — we'd love to collaborate.</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ DOWNLOADS ═══════════ -->
+<div class="page" id="page-downloads">
+  <div class="container">
+    <div class="section">
+      <div class="section-head">
+        <div class="section-eyebrow">Downloads</div>
+        <h2 class="section-title">Get Bluebird on your device.</h2>
+        <p class="section-subtitle">All builds are free. Always will be. Choose the version that's right for you.</p>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:32px;">
+        <div class="download-card featured">
+          <div style="margin-bottom:10px;"><span class="tag tag-latest">CURRENT STABLE</span></div>
+          <div class="dl-title">Bluebird OS v1.7</div>
+          <div class="dl-version">v1.7 stable · android 8.0+ · API 26+</div>
+          <p class="dl-desc">The latest stable release. Recommended for all users. Desktop icon &amp; taskbar fixes, cleaner UI with no text labels, polished widget panel with working weather API, improved landscape mode, and all features as of v1.7.</p>
+          <div class="dl-meta">
+            <span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              2026
+            </span>
+            <span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Open Source
+            </span>
+            <span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
+              API 26+
+            </span>
+          </div>
+          <div class="dl-buttons">
+            <button class="download-btn" id="downloadBtn" onclick="startFeaturedDownload()">
+              <span id="btnIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </span>
+              <span id="btnText">v1.7 ARM64 (.apk)</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="download-card">
+          <div style="margin-bottom:10px;"><span class="tag tag-soon">IN DEVELOPMENT</span></div>
+          <div class="dl-title">Bluebird OS v1.8 &amp; v1.9</div>
+          <div class="dl-version">v1.8 in development · v1.9 planned</div>
+          <p class="dl-desc">v1.8 is under active development (terminal &amp; web app installation coming), and v1.9 is in the planning stage.</p>
+          <div class="dl-meta">
+            <span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              In Progress
+            </span>
+          </div>
+          <div class="dl-buttons">
+            <a class="btn btn-yellow" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Track on GitHub</a>
+            <button class="btn btn-ghost" onclick="go('community')">Community</button>
+          </div>
+        </div>
+
+        <div class="download-card">
+          <div style="margin-bottom:10px;"><span class="tag tag-stable">ARCHIVE</span></div>
+          <div class="dl-title">Older Versions</div>
+          <div class="dl-version">v1.0 through v1.6</div>
+          <p class="dl-desc">Previous stable releases. Useful for testing compatibility on specific device configurations or Android versions.</p>
+          <div class="dl-meta">
+            <span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+              Archived Builds
+            </span>
+          </div>
+          <div class="dl-buttons">
+            <a class="btn btn-ghost" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">GitHub Releases</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-eyebrow" style="margin-bottom:20px;">Individual Apps by Norbert (LAMN-NOBERT)</div>
+      <div class="grid-3" style="margin-bottom:32px;">
+        <div class="download-card">
+          <div class="dl-title" style="font-size:1rem;display:flex;align-items:center;gap:8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Bluebird Browser
+          </div>
+          <div class="dl-version">part of the bluebird suite</div>
+          <p class="dl-desc" style="margin-bottom:14px;">Lightweight browser for the Bluebird environment.</p>
+          <div class="dl-buttons">
+            <button class="btn btn-primary btn-sm">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <div class="dl-title" style="font-size:1rem;display:flex;align-items:center;gap:8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            Bluebird Files
+          </div>
+          <div class="dl-version">part of the bluebird suite</div>
+          <p class="dl-desc" style="margin-bottom:14px;">Full-featured file manager with windowed mode support.</p>
+          <div class="dl-buttons">
+            <button class="btn btn-primary btn-sm">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+        <div class="download-card">
+          <div class="dl-title" style="font-size:1rem;display:flex;align-items:center;gap:8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            Bluebird Terminal
+          </div>
+          <div class="dl-version">part of the bluebird suite</div>
+          <p class="dl-desc" style="margin-bottom:14px;">Shell terminal with SSH support, built for Bluebird.</p>
+          <div class="dl-buttons">
+            <button class="btn btn-primary btn-sm">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+            <a class="btn btn-ghost btn-sm" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice">
+        <span class="notice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </span>
+        <div><strong style="color:var(--text);">Verify your download.</strong> Always check the SHA-256 checksum. Published checksums live in our GitHub repository. Example: <code>sha256sum bluebird-v1.7-arm64.apk</code></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<div class="page" id="page-about">
+  <div class="container">
+    <div class="section">
+      <div class="section-head">
+        <div class="section-eyebrow">About Bluebird</div>
+        <h2 class="section-title">Built in Uganda.<br>Built for the world.</h2>
+        <p class="section-subtitle">The story of Bluebird — who we are, why we built it, and where we're going next.</p>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:40px;align-items:start;">
+        <div>
+          <p style="color:var(--text-dim);font-size:1rem;line-height:1.85;margin-bottom:20px;">
+            <strong style="color:var(--text);">Bluebird started with a simple question:</strong> what would Android look like if it felt like a real desktop OS? Not just a phone launcher, but a full environment — windows, taskbars, multitasking, built-in apps — all running on the phone in your pocket.
+          </p>
+          <p style="color:var(--text-dim);font-size:1rem;line-height:1.85;margin-bottom:20px;">
+            Norbert is the creator behind <strong style="color:var(--ugandan-yellow);">Bluebird OS</strong>, based in <strong style="color:var(--text);">Uganda</strong>. We started Bluebird because he believed world-class software doesn't have to come from Silicon Valley — it can come from Kampala.
+          </p>
+          <p style="color:var(--text-dim);font-size:1rem;line-height:1.85;">
+            Bluebird is <strong style="color:var(--text);">completely free and open source</strong> under the MIT license. We have no investors, no VC funding, no subscription fees. We build it because we love Android and we believe in the open-source philosophy.
+          </p>
+        </div>
+        <div class="uganda-section">
+          <div style="font-size:2.5rem;margin-bottom:12px;">🇺🇬</div>
+          <h3 style="font-family:var(--font-head);font-weight:700;font-size:1.2rem;margin-bottom:8px;letter-spacing:-0.3px;color:var(--text);">Made in Uganda</h3>
+          <p style="color:var(--text-dim);font-size:0.9rem;line-height:1.7;margin-bottom:16px;">Bluebird is proudly developed in Uganda. We're part of the growing East African tech movement, showing that impactful, polished software is being built right here.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span class="tag tag-stable">East Africa Tech</span>
+            <span class="tag tag-oss">Open Source</span>
+            <span class="tag tag-latest">Made in UG</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:40px;">
+        <div class="section-eyebrow" style="margin-bottom:20px;">The Creator</div>
+        <div style="display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;">
+
+          <!-- Avatar card -->
+          <div class="team-card" style="flex:0 0 220px;min-width:180px;">
+            <div class="team-avatar" style="background:none;border:3px solid var(--border-light);overflow:hidden;padding:0;width:88px;height:88px;margin-bottom:16px;">
+              <img src="../assets/img/team/norbert.jpg" alt="Norbert" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--sky) 0%,#7c3aed 100%);border-radius:50%;font-size:2rem;font-weight:700;color:#fff;font-family:var(--font-head);">N</div>
+            </div>
+            <div class="team-name">Norbert</div>
+            <div class="team-role">Founder &amp; Lead Developer</div>
+            <div class="team-bio" style="margin-top:8px;">Known online as <strong style="color:var(--sky);">LAMN-NOBERT</strong>. Solo developer based in Kampala, Uganda.</div>
+            <div style="display:flex;gap:8px;margin-top:14px;justify-content:center;">
+              <a href="https://github.com/Norbert-web" target="_blank" rel="noopener" class="footer-social-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://twitter.com/norbertlamn" target="_blank" rel="noopener" class="footer-social-link" title="X / Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bio text -->
+          <div style="flex:1;min-width:260px;">
+            <p style="color:var(--text-dim);font-size:1rem;line-height:1.85;margin-bottom:16px;">
+              <strong style="color:var(--text);">Norbert</strong> is a self-taught Android developer from Kampala, Uganda. He started Bluebird with one question in mind: what would Android look like if it genuinely felt like a desktop OS?
+            </p>
+            <p style="color:var(--text-dim);font-size:1rem;line-height:1.85;margin-bottom:16px;">
+              Every line of Bluebird — the OS simulator core, the desktop mode, the windowing system, the built-in app suite, and the website — is built and maintained by Norbert alone. Bluebird has no VC funding, no investors, and no team. Just one developer, open source, and a community of users who believe in it.
+            </p>
+            <p style="color:var(--text-dim);font-size:1rem;line-height:1.85;">
+              Beyond Bluebird, Norbert also builds <strong style="color:var(--text);">Remote Schools</strong> (an offline education platform on Uganda's curriculum), <strong style="color:var(--text);">EchoChamber</strong>, <strong style="color:var(--text);">Math Labs</strong>, and the <strong style="color:var(--text);">Virtual Physical Environment Simulator</strong> — all free, all open source.
+            </p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;">
+              <span class="tag tag-stable">Solo Developer</span>
+              <span class="tag tag-oss">Open Source</span>
+              <span class="tag tag-soon">Kampala, Uganda</span>
+              <span class="tag tag-latest">Android Developer</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:40px;">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Our Mission</h3>
+          <p>To make Android feel like the powerful OS it can be — with a real desktop experience, modular apps, and an ecosystem that anyone can contribute to.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Open Source First</h3>
+          <p>Every line of Bluebird is public. We maintain GitHub repos, respond to issues, and review PRs. Open source isn't a marketing strategy — it's how we build.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--sky)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Built for Everyone</h3>
+          <p>Bluebird is designed to run on budget devices, not just flagships. Accessible software for the global majority — especially in regions where hardware is limited.</p>
+        </div>
+      </div>
+
+      <div class="notice notice-yellow">
+        <span class="notice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--ugandan-yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </span>
+        <div><strong style="color:var(--ugandan-yellow);">Get in Touch</strong> — For collaboration, press, or partnership inquiries: reach us through <a href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">GitHub</a>, <a href="https://t.me" target="_blank" rel="noopener">Telegram</a>, or join our <a onclick="go('community')" style="cursor:pointer;">community channels</a>. We're always open to talking.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ PRIVACY ═══════════ -->
+<div class="page" id="page-privacy">
+  <div class="container">
+    <div class="section" style="max-width:760px;">
+      <div class="section-head">
+        <div class="section-eyebrow">Legal</div>
+        <h2 class="section-title">Privacy Policy</h2>
+        <p class="section-subtitle">We believe privacy is a right. Here's what Bluebird collects — and what it doesn't.</p>
+      </div>
+      <div class="card" style="margin-bottom:20px;">
+        <h3 style="margin-bottom:12px;">The Short Version</h3>
+        <p style="color:var(--text-dim);line-height:1.8;font-size:0.9rem;">Bluebird OS collects <strong style="color:var(--text);">no personal data, no telemetry, no analytics</strong>. The app runs fully offline by default. We don't have servers watching your usage. We don't know who you are. We don't want to.</p>
+      </div>
+      <div class="cl-entry">
+        <div class="cl-header"><div class="cl-ver">What We Collect</div></div>
+        <div class="cl-body">
+          <ul class="cl-list">
+            <li><strong>Nothing automatically.</strong> Bluebird does not phone home, does not send crash reports automatically, and does not collect usage statistics.</li>
+            <li><strong>GitHub interactions.</strong> If you open an issue or PR on GitHub, GitHub's own privacy policy applies to that interaction.</li>
+            <li><strong>Community platforms.</strong> If you join our Telegram, Discord, or Reddit — those platforms' own policies apply.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cl-entry">
+        <div class="cl-header"><div class="cl-ver">Your Data on Your Device</div></div>
+        <div class="cl-body">
+          <ul class="cl-list">
+            <li>All your files, settings, and app data within Bluebird stay on your device only.</li>
+            <li>Bluebird does not sync or back up your data to any external servers we operate.</li>
+            <li>You are in full control.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="notice notice-green" style="margin-top:24px;">
+        <span class="notice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </span>
+        <div>As an open-source project, you can verify these claims yourself. <a href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Read the source code on GitHub.</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ TERMS ═══════════ -->
+<div class="page" id="page-terms">
+  <div class="container">
+    <div class="section" style="max-width:760px;">
+      <div class="section-head">
+        <div class="section-eyebrow">Legal</div>
+        <h2 class="section-title">Terms of Use</h2>
+        <p class="section-subtitle">Simple, plain-language terms for using Bluebird.</p>
+      </div>
+      <div class="cl-entry">
+        <div class="cl-header"><div class="cl-ver">Permitted Use</div></div>
+        <div class="cl-body">
+          <ul class="cl-list">
+            <li>You may use Bluebird freely for personal, educational, or commercial purposes.</li>
+            <li>You may modify the source code under the terms of the MIT license.</li>
+            <li>You may distribute copies or modified versions with attribution.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cl-entry">
+        <div class="cl-header"><div class="cl-ver">Prohibited Use</div></div>
+        <div class="cl-body">
+          <ul class="cl-list">
+            <li>Do not redistribute Bluebird while claiming it is your own original work without attribution.</li>
+            <li>Do not use Bluebird to violate laws in your jurisdiction.</li>
+            <li>Do not remove license notices from distributed copies.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cl-entry">
+        <div class="cl-header"><div class="cl-ver">Disclaimer</div></div>
+        <div class="cl-body">
+          <ul class="cl-list">
+            <li>Bluebird is provided "as is" without warranty of any kind.</li>
+            <li>Norbert (LAMN-NOBERT) is not liable for any damages resulting from use of Bluebird.</li>
+            <li>Use at your own risk — though we work hard to make every release solid.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ LICENSE ═══════════ -->
+<div class="page" id="page-license">
+  <div class="container">
+    <div class="section" style="max-width:760px;">
+      <div class="section-head">
+        <div class="section-eyebrow">Legal</div>
+        <h2 class="section-title">MIT License</h2>
+        <p class="section-subtitle">Bluebird OS is free and open source software, distributed under the MIT License.</p>
+      </div>
+      <div class="notice notice-green">
+        <span class="notice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+        </span>
+        <div><strong style="color:#16a34a;">MIT License</strong> — Do almost anything with the software: use it commercially, modify it, distribute it, sublicense it. Just keep the copyright notice.</div>
+      </div>
+      <pre style="margin-top:24px;"><code>MIT License
+
+Copyright (c) 2024–2026 Norbert (LAMN-NOBERT), Uganda
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.</code></pre>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" onclick="go('home')" style="display:inline-flex;margin-bottom:0;">
+          <div class="logo-mark">
+            <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="42" height="42" rx="10" fill="url(#lg2)"/>
+              <path d="M9 24C9 24 12 14 21 14C28 14 33 20 33 20C33 20 28 17 22 19C22 19 30 22 30 28C30 28 25 24 21 25C21 25 26 29 24 33C24 33 19 28 18 24C18 24 14 27 9 24Z" fill="white" opacity="0.95"/>
+              <circle cx="28" cy="16" r="2" fill="#FCDC04"/>
+              <defs>
+                <linearGradient id="lg2" x1="0" y1="0" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#1a90ff"/>
+                  <stop offset="1" stop-color="#0c6fd4"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <div class="logo-name">Bluebird <span>OS</span></div>
+          </div>
+        </a>
+        <p>A free, open-source Android desktop launcher. Built by Norbert (aka LAMN-NOBERT) in Uganda. Currently on v1.7 — v1.8 under development.</p>
+        <div class="footer-flag">
+          <div class="ugandan-stripe">
+            <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+          </div>
+          Proudly made in Uganda
+        </div>
+        <div class="footer-social-row">
+          <a class="footer-social-link" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a class="footer-social-link" href="https://www.reddit.com/user/Nearby_Fruit488/" target="_blank" rel="noopener" title="Reddit">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+          </a>
+          <a class="footer-social-link" href="https://tiktok.com/@bluebirdeleases" target="_blank" rel="noopener" title="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.29 6.29 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.07a8.16 8.16 0 0 0 4.77 1.52V7.14a4.85 4.85 0 0 1-1-.45z"/></svg>
+          </a>
+          <a class="footer-social-link" href="https://www.youtube.com/bluebird-releases" target="_blank" rel="noopener" title="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+          <a class="footer-social-link" href="https://twitter.com/norbertlamn" target="_blank" rel="noopener" title="X / Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="footer-social-link" href="https://t.me" target="_blank" rel="noopener" title="Telegram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Project</h4>
+        <ul>
+          <li><a onclick="go('home')">Home</a></li>
+          <li><a onclick="go('releases')">Releases</a></li>
+          <li><a onclick="go('downloads')">Downloads</a></li>
+          <li><a onclick="go('apps')">Apps</a></li>
+          <li><a onclick="go('docs')">Documentation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Bluebird Enterprise</h4>
+        <ul>
+          <li><a class="footer-back-link" href="../index.html">Company home</a></li>
+          <li><a href="../about.html">About the company</a></li>
+          <li><a href="../services.html">Other services</a></li>
+          <li><a href="../products.html">All products &amp; projects</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">GitHub <span class="ext">OSS</span></a></li>
+          <li><a href="https://t.me" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="https://discord.com" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://www.reddit.com/user/Nearby_Fruit488/" target="_blank" rel="noopener">Reddit</a></li>
+          <li><a href="https://www.youtube.com/bluebird-releases" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://twitter.com/norbertlamn" target="_blank" rel="noopener">X / Twitter</a></li>
+          <li><a href="https://tiktok.com/@bluebirdeleases" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal &amp; Info</h4>
+        <ul>
+          <li><a onclick="go('privacy')">Privacy Policy</a></li>
+          <li><a onclick="go('terms')">Terms of Use</a></li>
+          <li><a onclick="go('license')">MIT License</a></li>
+          <li><a onclick="go('about')">About Us</a></li>
+          <li><a onclick="go('community')">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024–2026 Norbert (LAMN-NOBERT), Uganda. Bluebird OS is free and open source software licensed under the MIT License. Android is a trademark of Google LLC.</p>
+      <div class="footer-oss-badge">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#16a34a" stroke-width="1.5"/><path d="M6 3v3l2 1.5" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Open Source · MIT License
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════ LIGHTBOX ═══════ -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')" aria-label="Close">✕</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
