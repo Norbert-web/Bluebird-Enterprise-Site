@@ -1417,3 +1417,12 @@ footer {
 @media (prefers-reduced-motion:reduce){
   *{transition:none !important;animation:none !important;}
 }
+
+/* Official Bluebird identity */
+.logo-mark img {
+  width: 42px;
+  height: 42px;
+  display: block;
+  object-fit: contain;
+  border-radius: 10px;
+}
