@@ -57,7 +57,3 @@ License: MIT — the repository is free to reuse or adapt, but its primary purpo
 - This repository is licensed under the MIT License and may be reused or adapted. If you reuse it as a template, update all branding, contact details, and the CNAME to avoid confusion with the official Bluebird Enterprise site.
 - When redistributing, include the LICENSE file and keep attributions as required by the MIT license.
 
-## Need changes or a commit?
-
-- I updated this README text to reflect that this repo is the live Bluebird Enterprise website with real content (no placeholders) and that it remains reusable under MIT.
-- If you’d like, I can commit this README to the repository, add or update a LICENSE file, or make any other edits (update contact info, change the live-site URL, or prepare a contributor guide). Tell me which action you want me to take next.
