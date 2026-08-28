@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="canonical" href="https://bluebirduganda.dpdns.org/services.html">
 <meta name="theme-color" content="#0b1220">
@@ -42,7 +42,7 @@
 <header class="site-header">
   <div class="nav-inner">
     <a class="brand" href="index.html">
-      <span class="brand-mark"><img src="assets/img/logo.svg" alt="" width="36" height="36" onerror="this.parentElement.textContent='BE';"></span>
+      <span class="brand-mark"><img src="assets/img/logo.png" alt="" width="36" height="36" onerror="this.parentElement.textContent='BE';"></span>
       <span>Bluebird Enterprise<span class="brand-name-sub">Kampala, Uganda</span></span>
     </a>
     <div style="display:flex;align-items:center;gap:10px;">
@@ -66,8 +66,23 @@
 </header>
 
 <main id="main">
+<section class="how-we-work" aria-labelledby="work-title">
+  <div class="section-heading">
+    <span class="eyebrow">How we work</span>
+    <h2 id="work-title">A clear process from idea to delivery.</h2>
+    <p>Good projects need more than technical skill. They need clear expectations, communication and careful review.</p>
+  </div>
+  <div class="process-grid">
+    <article class="process-step"><span>01</span><h3>Understand</h3><p>We learn about the goal, users, requirements and constraints.</p></article>
+    <article class="process-step"><span>02</span><h3>Plan</h3><p>We define the scope, approach, deliverables and practical next steps.</p></article>
+    <article class="process-step"><span>03</span><h3>Build</h3><p>We design, develop and implement the agreed solution.</p></article>
+    <article class="process-step"><span>04</span><h3>Review</h3><p>We test, refine and incorporate useful feedback before delivery.</p></article>
+    <article class="process-step"><span>05</span><h3>Deliver & support</h3><p>We deliver the finished work and can provide continued support where applicable.</p></article>
+  </div>
+</section>
 
-  <section class="section-tight section-ink">
+
+  <section class="section-tight section-ink page-hero">
     <div class="wrap">
       <span class="eyebrow">Services &amp; pricing</span>
       <h1>The full menu</h1>
@@ -75,13 +90,16 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section services-intro">
     <div class="wrap">
+      <div class="service-jump" aria-label="Service categories">
+        <a href="#digital">Web &amp; Apps</a><a href="#creative">Creative</a><a href="#content">Print &amp; Content</a><a href="#technical">Technical</a><a href="#packages">Packages</a><a href="#schools">Schools Program</a>
+      </div>
       <div class="callout" style="margin-bottom:40px;">
         Prefer not to price each item separately? Skip to the <a href="#packages">bundled packages</a> below — most clients start there.
       </div>
 
-      <div class="ledger-wrap" style="margin-bottom:36px;">
+      <div id="digital" class="ledger-wrap service-block" style="margin-bottom:36px;">
         <table class="ledger">
           <caption>01 — Digital Presence (Web &amp; App)</caption>
           <thead><tr><th>Service</th><th>Details</th><th style="text-align:right;">Price</th></tr></thead>
@@ -96,7 +114,7 @@
         </table>
       </div>
 
-      <div class="ledger-wrap" style="margin-bottom:36px;">
+      <div id="creative" class="ledger-wrap service-block" style="margin-bottom:36px;">
         <table class="ledger">
           <caption>02 — Graphic Design &amp; Creative</caption>
           <thead><tr><th>Service</th><th>Details</th><th style="text-align:right;">Price</th></tr></thead>
@@ -108,7 +126,7 @@
         </table>
       </div>
 
-      <div class="ledger-wrap" style="margin-bottom:36px;">
+      <div id="content" class="ledger-wrap service-block" style="margin-bottom:36px;">
         <table class="ledger">
           <caption>03 — Digital &amp; Physical Content</caption>
           <thead><tr><th>Service</th><th>Details</th><th style="text-align:right;">Price</th></tr></thead>
@@ -122,7 +140,7 @@
         </table>
       </div>
 
-      <div class="ledger-wrap">
+      <div id="technical" class="ledger-wrap service-block">
         <table class="ledger">
           <caption>04 — Hardware &amp; Technical Maintenance</caption>
           <thead><tr><th>Service</th><th>Details</th><th style="text-align:right;">Price</th></tr></thead>
@@ -146,7 +164,7 @@
         <p style="color:var(--text-muted);">Instead of quoting each service separately, most clients pick a tier and we scope from there.</p>
       </div>
       <div class="grid-3">
-        <div class="package">
+        <div class="package reveal">
           <span class="tier">Starter</span>
           <h3>Small business / church</h3>
           <div class="price">Ugx 800,000 – 1,000,000</div>
@@ -157,7 +175,7 @@
             <li>1 year hosting</li>
           </ul>
         </div>
-        <div class="package featured">
+        <div class="package featured reveal">
           <span class="tier">Growth</span>
           <h3>School / organization</h3>
           <div class="price">Ugx 1,500,000 – 2,500,000</div>
@@ -168,7 +186,7 @@
             <li>Printing &amp; binding services</li>
           </ul>
         </div>
-        <div class="package">
+        <div class="package reveal">
           <span class="tier">Enterprise</span>
           <h3>Full setup</h3>
           <div class="price">Quoted per project scope</div>
@@ -195,7 +213,7 @@
         <p style="color:var(--text-muted);max-width:64ch;">Most schools in Uganda still don't have a website. We're setting out to change that — one affordable, fully managed website per school, built, hosted, and maintained by us.</p>
       </div>
       <div class="grid-2" style="align-items:stretch;">
-        <div class="package featured">
+        <div class="package featured reveal">
           <span class="tier">School website</span>
           <h3>Built, hosted &amp; managed</h3>
           <div class="price">Ugx 500,000</div>
@@ -206,7 +224,7 @@
             <li>Discounts of 20%–40% available for qualifying schools</li>
           </ul>
         </div>
-        <div class="ticket">
+        <div class="ticket reveal">
           <div class="ticket-num"><span>Ongoing</span><span class="punch"></span></div>
           <h3>Monthly maintenance</h3>
           <div class="price" style="margin:6px 0 14px;">Ugx 90,000<span style="font-size:13px;color:var(--text-muted);">/month</span></div>
@@ -243,12 +261,12 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer"><div class="footer-trust-note">Clear scope · Clear communication · Practical technology</div>
   <div class="wrap">
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <span class="brand-mark"><img src="assets/img/logo.svg" alt="" width="30" height="30" onerror="this.parentElement.textContent='BE';"></span>
+          <span class="brand-mark"><img src="assets/img/logo.png" alt="" width="30" height="30" onerror="this.parentElement.textContent='BE';"></span>
           <h4 style="margin:0;">Bluebird Enterprise</h4>
         </div>
         <p style="max-width:32ch;">IT, creative, and computer services, built in Uganda.</p>

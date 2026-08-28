@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="canonical" href="https://bluebirduganda.dpdns.org/about.html">
 <meta name="theme-color" content="#0b1220">
@@ -42,7 +42,7 @@
 <header class="site-header">
   <div class="nav-inner">
     <a class="brand" href="index.html">
-      <span class="brand-mark"><img src="assets/img/logo.svg" alt="" width="36" height="36" onerror="this.parentElement.textContent='BE';"></span>
+      <span class="brand-mark"><img src="assets/img/logo.png" alt="" width="36" height="36" onerror="this.parentElement.textContent='BE';"></span>
       <span>Bluebird Enterprise<span class="brand-name-sub">Kampala, Uganda</span></span>
     </a>
     <div style="display:flex;align-items:center;gap:10px;">
@@ -66,8 +66,35 @@
 </header>
 
 <main id="main">
+<section class="company-timeline" aria-labelledby="timeline-title">
+  <div class="section-heading">
+    <span class="eyebrow">Our journey</span>
+    <h2 id="timeline-title">From curiosity to a growing technology company.</h2>
+    <p>Bluebird's story is built around learning, experimentation, building useful products and bringing those capabilities together.</p>
+  </div>
+  <div class="timeline-grid">
+    <article class="timeline-item"><span class="timeline-year">2022</span><h3>The beginning</h3><p>Programming became the starting point for a long-term journey into software and technology.</p></article>
+    <article class="timeline-item"><span class="timeline-year">2023–2024</span><h3>Building & learning</h3><p>Projects and experimentation expanded into broader software, web and technical capabilities.</p></article>
+    <article class="timeline-item"><span class="timeline-year">2025</span><h3>Bluebird OS</h3><p>Development of Bluebird OS grew into a flagship product and a practical demonstration of software capabilities.</p></article>
+    <article class="timeline-item"><span class="timeline-year">2026</span><h3>Bluebird Enterprise</h3><p>The work is expanding into a multidisciplinary technology and digital-services organization.</p></article>
+  </div>
+</section>
 
-  <section class="section-tight section-ink">
+<section class="trust-section" aria-labelledby="trust-title">
+  <div class="section-heading">
+    <span class="eyebrow">Our approach</span>
+    <h2 id="trust-title">Professional work starts with trust.</h2>
+  </div>
+  <div class="trust-grid">
+    <article><h3>Clear scope</h3><p>We aim to make deliverables and expectations understandable before work begins.</p></article>
+    <article><h3>Clear communication</h3><p>Clients should know what is happening and have a clear way to ask questions.</p></article>
+    <article><h3>Practical technology</h3><p>We choose tools and approaches based on the problem, not simply because they are fashionable.</p></article>
+    <article><h3>Long-term thinking</h3><p>Where appropriate, we consider maintenance, updates, usability and future growth from the start.</p></article>
+  </div>
+</section>
+
+
+  <section class="section-tight section-ink page-hero">
     <div class="wrap">
       <span class="eyebrow">About</span>
       <h1>Developers first. A company because of it.</h1>
@@ -77,15 +104,19 @@
 
   <section class="section">
     <div class="wrap grid-2">
-      <div>
+      <div class="story-copy">
         <span class="eyebrow">Origin</span>
-        <h2>It started with Bluebird OS</h2>
+        <h2>It started with curiosity.</h2>
         <p style="color:var(--text-muted);">Before there was a company, there was a project: Bluebird OS, a free and open-source Android launcher that gives any phone a real desktop mode. No VC funding, no investors — just developers who loved Android and believed in open source.</p>
         <p style="color:var(--text-muted);">That project needed a website, then needed hosting, then needed design work, and the people building it turned out to be good at all of it. Bluebird Enterprise grew out of that: the same team, doing for other people — schools, churches, small businesses — what they'd already been doing for their own software.</p>
       </div>
-      <div>
+      <div class="story-media reveal">
+        <figure class="origin-photo">
+          <img src="assets/img/norbert-origin.jpg" alt="Bluebird Enterprise founder during the early programming journey" loading="lazy" decoding="async">
+          <figcaption>The early days: learning, experimenting and building.</figcaption>
+        </figure>
         <span class="eyebrow">Today</span>
-        <h2>An IT, creative &amp; computer services company</h2>
+        <h2>A multidisciplinary technology company</h2>
         <p style="color:var(--text-muted);">Bluebird Enterprise now covers four departments — digital presence, creative &amp; design, physical &amp; print content, and hardware &amp; technical services — while still building and maintaining Bluebird OS and a growing list of independent software projects.</p>
         <p style="color:var(--text-muted);">We're built for East Africa and the global majority first: lightweight software that runs on affordable hardware, and service pricing that matches the local market.</p>
       </div>
@@ -157,6 +188,17 @@
     </div>
   </section>
 
+  <section class="section section-alt proof-strip">
+    <div class="wrap">
+      <div class="proof-grid">
+        <div><strong>17+</strong><span>Projects built or in development</span></div>
+        <div><strong>5</strong><span>Company departments</span></div>
+        <div><strong>Uganda</strong><span>Built with local needs in mind</span></div>
+        <div><strong>Open source</strong><span>Bluebird OS development</span></div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-band">
     <div class="wrap">
       <h2>Want to work with us?</h2>
@@ -167,12 +209,12 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer"><div class="footer-trust-note">Clear scope · Clear communication · Practical technology</div>
   <div class="wrap">
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <span class="brand-mark"><img src="assets/img/logo.svg" alt="" width="30" height="30" onerror="this.parentElement.textContent='BE';"></span>
+          <span class="brand-mark"><img src="assets/img/logo.png" alt="" width="30" height="30" onerror="this.parentElement.textContent='BE';"></span>
           <h4 style="margin:0;">Bluebird Enterprise</h4>
         </div>
         <p style="max-width:32ch;">IT, creative, and computer services, built in Uganda.</p>

@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="canonical" href="https://bluebirduganda.dpdns.org/products.html">
 <meta name="theme-color" content="#0b1220">
@@ -42,7 +42,7 @@
 <header class="site-header">
   <div class="nav-inner">
     <a class="brand" href="index.html">
-      <span class="brand-mark"><img src="assets/img/logo.svg" alt="" width="36" height="36" onerror="this.parentElement.textContent='BE';"></span>
+      <span class="brand-mark"><img src="assets/img/logo.png" alt="" width="36" height="36" onerror="this.parentElement.textContent='BE';"></span>
       <span>Bluebird Enterprise<span class="brand-name-sub">Kampala, Uganda</span></span>
     </a>
     <div style="display:flex;align-items:center;gap:10px;">
@@ -67,7 +67,7 @@
 
 <main id="main">
 
-  <section class="section-tight section-ink">
+  <section class="section-tight section-ink page-hero">
     <div class="wrap">
       <span class="eyebrow">Products &amp; projects</span>
       <h1>Not just Bluebird OS</h1>
@@ -76,36 +76,71 @@
   </section>
 
   <!-- Bluebird OS flagship -->
-  <section class="section">
-    <div class="wrap grid-2">
-      <div>
-        <span class="eyebrow">Flagship — Android · Kotlin · Jetpack Compose</span>
+<section class="section product-flagship">
+  <div class="wrap">
+    <div class="product-hero-grid">
+      <div class="product-hero-copy">
+        <span class="eyebrow">Flagship product · Android · Kotlin · Jetpack Compose</span>
         <h2>Bluebird OS</h2>
-        <p style="color:var(--text-muted);">A free, open-source Android OS simulator and launcher that makes your phone feel like a real desktop computer — without rooting. It runs a full Android environment inside your device: windowed apps, a taskbar, a built-in app suite, and a desktop mode that works on any phone. Currently on <strong>v1.7 stable</strong>, with v1.8 in active development.</p>
-        <ul style="color:var(--text-muted);padding-left:18px;">
-          <li><strong>Desktop Mode</strong> — windowed experience with taskbar and multitasking, works with external monitors or in-hand</li>
-          <li><strong>OS Simulator + Launcher</strong> — use as your home launcher or a full environment simulator, no root required</li>
-          <li><strong>Lightweight</strong> — engineered for budget and mid-range Android devices, API 26+ (Android 8.0+)</li>
-          <li><strong>100% free &amp; open source</strong> — MIT license, no ads, no telemetry, no tracking</li>
-        </ul>
-        <p style="margin-top:18px;"><a href="bluebird-os/index.html">Visit the full Bluebird OS site — downloads, release history, docs &amp; community →</a></p>
+        <p class="product-lede">A free, open-source Android desktop experience that brings a familiar desktop workflow to your phone — with windows, taskbar, multitasking and a growing built-in app suite.</p>
+        <div class="product-status-row">
+          <span class="status-pill">v1.8</span>
+          <span class="status-pill">Android 8.0+</span>
+          <span class="status-pill">MIT License</span>
+          <span class="status-pill">No root required</span>
+        </div>
+        <div class="hero-actions" style="margin-top:22px;">
+          <a class="btn btn-primary" href="bluebird-os/index.html">Explore Bluebird OS →</a>
+          <a class="btn btn-ghost" href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">View source</a>
+        </div>
       </div>
-      <div class="card">
-        <span class="num">// built-in app suite</span>
-        <table class="ledger">
-          <tbody>
-            <tr><td class="name">🌐 Bluebird Browser</td><td>Lightweight, privacy-first</td></tr>
-            <tr><td class="name">📁 Bluebird Files</td><td>Windowed file manager</td></tr>
-            <tr><td class="name">💻 Bluebird Terminal</td><td>Shell with SSH support</td></tr>
-            <tr><td class="name">📝 Bluebird Notes</td><td>Markdown, local storage only</td></tr>
-            <tr><td class="name">🎵 Bluebird Music</td><td>Local music player</td></tr>
-          </tbody>
-        </table>
+      <div class="product-screenshot-card">
+        <img src="bluebird-os/assets/img/screenshots/desktop.png" alt="Bluebird OS desktop interface" loading="lazy" decoding="async">
+        <div class="product-screenshot-caption"><span>Bluebird OS desktop experience</span><span>Open source</span></div>
       </div>
     </div>
-  </section>
 
-  <!-- Bluebird OS deep-link banner -->
+    <div class="product-detail-grid">
+      <div>
+        <span class="eyebrow">What makes it distinctive</span>
+        <h3>A desktop-inspired experience, designed for Android.</h3>
+        <p style="color:var(--text-muted);">Bluebird OS is designed around the idea that an Android device can provide more than a traditional home-screen experience. The project combines a desktop-style shell with purpose-built applications and ongoing development.</p>
+      </div>
+      <div class="feature-list">
+        <div><strong>Desktop Mode</strong><span>Windowed apps, taskbar and multitasking.</span></div>
+        <div><strong>Built-in apps</strong><span>Browser, Files, Terminal, Notes, Music and more.</span></div>
+        <div><strong>Accessible hardware target</strong><span>Designed with budget and mid-range Android devices in mind.</span></div>
+        <div><strong>Open development</strong><span>Free to use and developed in the open.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Remote Schools spotlight -->
+<section class="section remote-schools-spotlight">
+  <div class="wrap">
+    <div class="remote-grid">
+      <div class="remote-visual" aria-hidden="true">
+        <div class="remote-orbit"><span>UG</span></div>
+        <div class="remote-card-mini"><strong>Remote Schools</strong><span>Learning · Uganda Curriculum</span></div>
+      </div>
+      <div>
+        <span class="eyebrow">In active development · Education</span>
+        <h2>Remote Schools</h2>
+        <p class="product-lede">An open, structured learning platform being developed for Ugandans and based on Uganda's curriculum.</p>
+        <p style="color:var(--text-muted);">The project is intended to organize learning materials into a practical digital environment, with lessons, exercises and assessments designed around the local curriculum. It is one of Bluebird's major development initiatives and will continue to evolve as the platform is built.</p>
+        <div class="product-status-row">
+          <span class="status-pill">In development</span>
+          <span class="status-pill">Uganda Curriculum</span>
+          <span class="status-pill">Education</span>
+        </div>
+        <p style="margin-top:18px;"><a href="https://github.com/Norbert-web/BLUEBIRD-PLUS" target="_blank" rel="noopener">Follow the development on GitHub →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bluebird OS deep-link banner -->
   <section class="section section-alt">
     <div class="wrap">
       <div class="ticket" style="background:var(--ink-soft);border-color:var(--ink-soft);">
@@ -127,24 +162,31 @@
         <h2>Everything in build, in one register</h2>
         <p style="color:var(--text-muted);">The BluebirdRelease platform tracks project notes, releases, and ideas — not limited to the OS, but every product our team runs.</p>
       </div>
+      <div class="project-filters" role="group" aria-label="Filter projects">
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="android">Android</button>
+        <button class="filter-btn" type="button" data-filter="web">Web</button>
+        <button class="filter-btn" type="button" data-filter="education">Education</button>
+        <button class="filter-btn" type="button" data-filter="other">Other</button>
+      </div>
       <ul class="project-list">
-        <li><span class="pname">01 · Bluebird OS Simulator (Android)</span><span class="pstack">Kotlin · Jetpack Compose</span></li>
-        <li><span class="pname">02 · Bluebird OS Web</span><span class="pstack">HTML · CSS · JS</span></li>
-        <li><span class="pname">03 · MathLabs</span><span class="pstack">Java &amp; Kotlin</span></li>
-        <li><span class="pname">04 · Remote Schools Site</span><span class="pstack">HTML · CSS · JS</span></li>
-        <li><span class="pname">05 · Ayary</span><span class="pstack">JS · Node.js</span></li>
-        <li><span class="pname">06 · ChainReact</span><span class="pstack">Kotlin</span></li>
-        <li><span class="pname">07 · EcoChamber</span><span class="pstack">HTML · CSS · JS</span></li>
-        <li><span class="pname">08 · NUIC</span><span class="pstack">HTML/CSS/JS · Java</span></li>
-        <li><span class="pname">09 · VoiceMet</span><span class="pstack">Java · Kotlin</span></li>
-        <li><span class="pname">10 · Bluebird Intranet</span><span class="pstack">—</span></li>
-        <li><span class="pname">11 · Remote Schools Nin-MS</span><span class="pstack">—</span></li>
-        <li><span class="pname">12 · Remote Schools Android</span><span class="pstack">—</span></li>
-        <li><span class="pname">13 · GNN — Computer &amp; News</span><span class="pstack">—</span></li>
-        <li><span class="pname">14 · LiveCamScanner</span><span class="pstack">Kotlin · ML Kit</span></li>
-        <li><span class="pname">15 · Edex UI Inch</span><span class="pstack">Kotlin</span></li>
-        <li><span class="pname">16 · Bluebird React UI</span><span class="pstack">React · Kotlin · Flutter</span></li>
-        <li><span class="pname">17 · Bluebird Schools Management System</span><span class="pstack">Local server · full-stack</span></li>
+        <li data-category="android"><span class="pname">01 · Bluebird OS Simulator (Android)</span><span class="pstack">Kotlin · Jetpack Compose</span></li>
+        <li data-category="web"><span class="pname">02 · Bluebird OS Web</span><span class="pstack">HTML · CSS · JS</span></li>
+        <li data-category="android"><span class="pname">03 · MathLabs</span><span class="pstack">Java &amp; Kotlin</span></li>
+        <li data-category="web"><span class="pname">04 · Remote Schools Site</span><span class="pstack">HTML · CSS · JS</span></li>
+        <li data-category="web"><span class="pname">05 · Ayary</span><span class="pstack">JS · Node.js</span></li>
+        <li data-category="web"><span class="pname">06 · ChainReact</span><span class="pstack">Kotlin</span></li>
+        <li data-category="web"><span class="pname">07 · EcoChamber</span><span class="pstack">HTML · CSS · JS</span></li>
+        <li data-category="web"><span class="pname">08 · NUIC</span><span class="pstack">HTML/CSS/JS · Java</span></li>
+        <li data-category="android"><span class="pname">09 · VoiceMet</span><span class="pstack">Java · Kotlin</span></li>
+        <li data-category="other"><span class="pname">10 · Bluebird Intranet</span><span class="pstack">—</span></li>
+        <li data-category="education"><span class="pname">11 · Remote Schools Nin-MS</span><span class="pstack">—</span></li>
+        <li data-category="education"><span class="pname">12 · Remote Schools Android</span><span class="pstack">—</span></li>
+        <li data-category="other"><span class="pname">13 · GNN — Computer &amp; News</span><span class="pstack">—</span></li>
+        <li data-category="android"><span class="pname">14 · LiveCamScanner</span><span class="pstack">Kotlin · ML Kit</span></li>
+        <li data-category="android"><span class="pname">15 · Edex UI Inch</span><span class="pstack">Kotlin</span></li>
+        <li data-category="web"><span class="pname">16 · Bluebird React UI</span><span class="pstack">React · Kotlin · Flutter</span></li>
+        <li data-category="education"><span class="pname">17 · Bluebird Schools Management System</span><span class="pstack">Local server · full-stack</span></li>
       </ul>
       <p style="margin-top:22px;"><a href="services.html#schools">See our Schools Program pricing →</a></p>
     </div>
@@ -159,17 +201,17 @@
         <p style="color:var(--text-muted);">Uganda's free curriculum-structured learning platform. What started as a school website project is growing into a full remote-learning platform, built around a reusable schools database: home, about, academics, admissions, student life, news &amp; events, contact &amp; support, and a parent/student portal for fees and internal resources.</p>
       </div>
       <div class="grid-3">
-        <div class="card">
+        <div class="card reveal">
           <span class="num">Structure</span>
           <h3>Home → About → Academics</h3>
           <p>Mission, background, administration, and facilities grouped under one About section; academics covers curriculum, roadmap, performance, and downloads.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <span class="num">Structure</span>
           <h3>Admissions → Student Life</h3>
           <p>How to apply and fee info, alongside clubs, sports, the prefectorial body, and student-written articles and stories.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <span class="num">Structure</span>
           <h3>News, Contact &amp; Portal</h3>
           <p>An events calendar, a contact and suggestion board, and a login-gated portal for fees and other sensitive records.</p>
@@ -187,17 +229,17 @@
         <p style="color:var(--text-muted);max-width:64ch;">A completely free, full-stack school management system built for the local context — student records, and administration, designed to run well even where connectivity is limited.</p>
       </div>
       <div class="grid-3">
-        <div class="card">
+        <div class="card reveal">
           <span class="num">Feature</span>
           <h3>Local server management</h3>
           <p>Built to run on a school's own local server, so records stay accessible even with limited or no internet.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <span class="num">Feature</span>
           <h3>Student database</h3>
           <p>A structured, searchable record of students, results, and attendance, tailored to how Ugandan schools actually operate.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <span class="num">Feature</span>
           <h3>More on the way</h3>
           <p>Additional modules are in active development as the project matures.</p>
@@ -209,17 +251,17 @@
   <!-- Public repos -->
   <section class="section">
     <div class="wrap grid-3">
-      <div class="card">
+      <div class="card reveal">
         <span class="num">Public repo</span>
         <h3>Bluebird Grand Store</h3>
         <p>Package repository for Bluebird app packages (.bpk).</p>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <span class="num">Public repo</span>
         <h3>Remote Schools Reusable Database</h3>
         <p>Reusable structured notes and lessons for schools projects.</p>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <span class="num">Public repo</span>
         <h3>BluebirdReleases</h3>
         <p>Source of the BluebirdRelease site content — open for public use.</p>
@@ -235,9 +277,9 @@
         <h2>What's next</h2>
       </div>
       <div class="grid-3">
-        <div class="card"><span class="num">Next</span><h3>Luo–English Bible</h3></div>
-        <div class="card"><span class="num">Next</span><h3>Kiswahili–Luo–English Dictionary</h3></div>
-        <div class="card"><span class="num">Next</span><h3>Omweso (game)</h3></div>
+        <div class="card reveal"><span class="num">Next</span><h3>Luo–English Bible</h3></div>
+        <div class="card reveal"><span class="num">Next</span><h3>Kiswahili–Luo–English Dictionary</h3></div>
+        <div class="card reveal"><span class="num">Next</span><h3>Omweso (game)</h3></div>
       </div>
     </div>
   </section>
@@ -252,12 +294,12 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer"><div class="footer-trust-note">Clear scope · Clear communication · Practical technology</div>
   <div class="wrap">
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <span class="brand-mark"><img src="assets/img/logo.svg" alt="" width="30" height="30" onerror="this.parentElement.textContent='BE';"></span>
+          <span class="brand-mark"><img src="assets/img/logo.png" alt="" width="30" height="30" onerror="this.parentElement.textContent='BE';"></span>
           <h4 style="margin:0;">Bluebird Enterprise</h4>
         </div>
         <p style="max-width:32ch;">IT, creative, and computer services, built in Uganda.</p>
